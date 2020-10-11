@@ -6,7 +6,7 @@ class CircularLinkedListQueue {
     }
 
     _buildEmptyLinkedList(num = 1) {
-        let sentinel = new ListNode();
+        const sentinel = new ListNode();
         let current = sentinel;
 
         for (let i = 0; i < num; i++) {
@@ -19,8 +19,12 @@ class CircularLinkedListQueue {
     }
 
     enqueue(itemVal) {
+        if (this.tail.next === this.head) {
+            return false;
+        }
         this.tail.val = itemVal;
         this.tail = this.tail.next;
+        return true;
     }
 
     dequeue() {
