@@ -1,20 +1,26 @@
-let array = [],
-    set = new Set(),
-    n = 10_000_000;
+window.myArray = [];
+window.mySet = new Set();
+window.myObj = {};
+const n = 10_000_000;
 
 for (let i = 0; i < n; i++) {
-    array.push(i);
-    set.add(i);
+    myArray.push(i);
+    mySet.add(i);
+    myObj[i] = i;
 }
 
 console.time('Array.prototype.includes');
-array.includes(n - 1);
+window.myArray.includes(n - 1);
 console.timeEnd('Array.prototype.includes');
 
 console.time('Array.prototype.indexOf');
-array.indexOf(n - 1);
+window.myArray.indexOf(n - 1);
 console.timeEnd('Array.prototype.indexOf');
 
 console.time('Set.prototype.has');
-set.has(n - 1);
+window.mySet.has(n - 1);
 console.timeEnd('Set.prototype.has');
+
+console.time('Object.prototype.hasOwnProperty');
+window.myObj.hasOwnProperty(n - 1);
+console.timeEnd('Object.prototype.hasOwnProperty');
