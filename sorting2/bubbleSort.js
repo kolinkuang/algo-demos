@@ -20,6 +20,8 @@ function bubbleSort(list) {
     return list;
 }
 
-console.log(bubbleSort([6, 5, 4, 3, 2, 1]));
-console.log(bubbleSort([3, 5, 4, 1, 2, 6]));
-console.log(bubbleSort([4, 5, 6, 1, 2, 3]));
+// console.log(bubbleSort([6, 5, 4, 3, 2, 1]));
+// console.log(bubbleSort([3, 5, 4, 1, 2, 6]));
+// console.log(bubbleSort([4, 5, 6, 1, 2, 3]));
+
+module.exports = bubbleSort;
