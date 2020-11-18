@@ -1,5 +1,5 @@
-const bubbleSort = require('../sorting2/bubbleSort');
-const insertionSort = require('../sorting2/insertionSort');
+const bubbleSort = require('../sorting2/bubbleSort/case1');
+const insertionSort = require('../sorting2/insertionSort/case1');
 
 //随机生成 10000 个数组，每个数组中包含 200 个数据，然后分别用冒泡和插入排序算法来排序
 const data = [];
